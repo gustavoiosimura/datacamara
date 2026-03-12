@@ -1,0 +1,419 @@
+
+.btn-voltar {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.btn-voltar:hover {
+  background-color: #0052a3;
+}
+
+.deputado-header {
+  position: relative;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.deputado-infos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.deputado-foto-grande {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0066cc;
+}
+
+.deputado-info h1 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 28px;
+}
+
+.deputado-partido {
+  color: #666;
+  font-size: 18px;
+  margin: 0;
+}
+
+.tabs-container {
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  background-color: #e0e0e0;
+}
+
+.tab.active {
+  background-color: #0066cc;
+  color: white;
+  font-weight: bold;
+}
+
+.despesas-resumo {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.despesas-resumo p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.despesas-lista {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+}
+
+.despesa-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.despesa-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.despesa-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.despesa-data {
+  font-weight: bold;
+  color: #666;
+  font-size: 14px;
+}
+
+.despesa-valor {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0066cc;
+}
+
+.despesa-body {
+  padding: 15px;
+  flex: 1;
+}
+
+.despesa-body p {
+  margin: 8px 0;
+  color: #333;
+  font-size: 13px;
+  word-wrap: break-word;
+}
+
+.despesa-glosa {
+  color: #d9534f;
+}
+
+.despesa-footer {
+  padding: 15px;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.btn-documento {
+  display: inline-block;
+  background-color: #28a745;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 13px;
+  transition: background-color 0.3s;
+}
+
+.btn-documento:hover {
+  background-color: #218838;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 40px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ── Tipo de Despesa + Ano ── */
+.tipo-selector-container {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  margin-bottom: 24px;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tipo-selector-wrapper {
+  flex: 0 0 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ano-selector-wrapper {
+  flex: 0 0 calc(30% - 16px);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tipo-selector-container label {
+  font-size: 13px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 2px;
+}
+
+.tipo-dropdown {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #2c3e50;
+  background-color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tipo-dropdown:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.tipo-dropdown:focus {
+  outline: none;
+  border-color: white;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.tipo-dropdown option {
+  padding: 12px;
+  font-weight: 500;
+  color: #2c3e50;
+  background-color: white;
+}
+
+.ano-botoes {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.btn-ano {
+  padding: 10px 12px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-ano:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.btn-ano--ativo {
+  background: white;
+  color: #764ba2;
+  border-color: white;
+  font-weight: 700;
+}
+
+/* ── Legislatura ── */
+.legislatura-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #6c3fc5, #4a90d9);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.legislatura-badge--mobile {
+  display: none;
+}
+
+/* ── Carregar mais ── */
+.btn-carregar-mais {
+  margin-top: 20px;
+  width: 100%;
+  display: block;
+  background-color: #28a745;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-carregar-mais:hover {
+  background-color: #28a745;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.btn-carregar-mais:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+}
+
+.btn-carregar-mais:disabled {
+  background-color: #6c757d;
+}
+
+/* ── Responsividade ── */
+@media (max-width: 1400px) {
+  .despesas-lista {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .despesas-lista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .deputado-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tabs {
+    justify-content: center;
+  }
+
+  .tab {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .deputado-info h1 {
+    font-size: 22px;
+  }
+
+  .despesas-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .tipo-selector-container {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .tipo-selector-wrapper,
+  .ano-selector-wrapper {
+    flex: unset;
+    width: 100%;
+  }
+
+  .tipo-dropdown {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+
+  .legislatura-badge {
+    display: none;
+  }
+
+  .legislatura-badge--mobile {
+    display: inline-block;
+    background: linear-gradient(135deg, #6c3fc5, #4a90d9);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+}
+
