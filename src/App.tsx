@@ -2,8 +2,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import DeputadosGrid from './components/DeputadosGrid'
 import type { Deputado, ApiResponse } from './types/deputado'
-import './App.css'
-import logo from './assets/logo.png'
+import './App.css' 
 
 
 function App() {
