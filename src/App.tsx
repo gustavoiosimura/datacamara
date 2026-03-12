@@ -142,7 +142,7 @@ function App() {
       <header className="header"> 
           <div className="header-text">
             <h1>Data Câmara</h1>
-            <p className="subtitle">Baseie seus votos em dados, não em promessas</p> 
+            <p className="subtitle">Baseie seu voto em dados, não em promessas.</p> 
           </div>
           <span className="header-badge">{deputadosFiltrados.length} deputados</span>
         </header>
