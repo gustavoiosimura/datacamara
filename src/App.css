@@ -87,13 +87,15 @@ body {
   color: #e74c3c;
 }
 
-.deputados-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin: 0 auto 40px;
-  max-width: 1200px;
-  width: 100%;
+@media (min-width: 1024px) {
+  .deputados-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 0 auto 40px;
+    max-width: 1200px;
+    width: 100%;
+  }
 }
 
 .deputado-details {
@@ -123,20 +125,21 @@ body {
 /* Tablet: 2 colunas */
 @media (max-width: 1024px) {
   .deputados-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 
   .header h1 {
     font-size: 1.75rem;
   }
 }
-
-/* Mobile: 1 coluna */
+  
+/* Mobile: 2 colunas */
 @media (max-width: 640px) {
   .deputados-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px;
   }
+ 
 
   .header {
     flex-direction: column;
@@ -155,6 +158,25 @@ body {
 
   .container {
     padding: 15px;
+  }
+   .filtros {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr; /* 2 colunas iguais */
+    gap: 12px;
+  }
+
+  .filtro-busca {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .filtro-select {
+    width: 100%;
+  }
+
+  .filtro-limpar {
+    grid-column: 1 / -1;
+    width: 100%;
   }
 }
 
@@ -183,6 +205,10 @@ body {
 }
 
 .filtro-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
   padding: 10px 14px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -190,7 +216,6 @@ body {
   background-color: #fff;
   cursor: pointer;
   outline: none;
-  transition: border-color 0.2s ease;
 }
 
 .filtro-select:focus {
