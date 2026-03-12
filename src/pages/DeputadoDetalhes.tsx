@@ -94,7 +94,7 @@ function DeputadoDetalhes() {
   const carregarLegislaturaAtual = async () => {
     try {
       const response = await fetch(
-        `/api/api/v2/legislaturas?ordem=DESC&ordenarPor=id&pagina=1&itens=100`,
+        `/api/v2/legislaturas?ordem=DESC&ordenarPor=id&pagina=1&itens=100`,
         { headers: { 'accept': 'application/json' } }
       )
       if (!response.ok) throw new Error('Erro ao buscar legislaturas')
@@ -134,7 +134,7 @@ function DeputadoDetalhes() {
       }
 
       if (tiposDespesa.length === 0) {
-        const tiposResponse = await fetch('/api/api/v2/referencias/deputados/tipoDespesa', {
+        const tiposResponse = await fetch('/api/v2/referencias/deputados/tipoDespesa', {
           headers: { 'accept': 'application/json' }
         })
         if (!tiposResponse.ok) throw new Error(`Erro ao buscar tipos de despesa: ${tiposResponse.status}`)
@@ -190,7 +190,7 @@ function DeputadoDetalhes() {
   const fetchDespesas = async (ano: number, id: number, pagina: number) => {
     try {
       const response = await fetch(
-        `/api/api/v2/deputados/${id}/despesas?ano=${ano}&ordem=ASC&ordenarPor=ano&pagina=${pagina}&itens=100`,
+        `/api/v2/deputados/${id}/despesas?ano=${ano}&ordem=ASC&ordenarPor=ano&pagina=${pagina}&itens=100`,
         { headers: { 'accept': 'application/json' } }
       )
       if (!response.ok) throw new Error('Erro ao buscar despesas')

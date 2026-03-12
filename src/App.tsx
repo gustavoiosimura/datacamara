@@ -24,7 +24,7 @@ function App() {
   const fetchDeputados = async (): Promise<void> => {
     try {
       setLoading(true)
-      const response = await fetch('/api/api/v2/deputados?ordem=ASC&ordenarPor=nome', {
+      const response = await fetch('/api/v2/deputados?ordem=ASC&ordenarPor=nome', {
         method: 'GET',
         headers: {
           'accept': 'application/json'
